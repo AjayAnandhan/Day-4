@@ -1,0 +1,58 @@
+// XMLXTTPRequest
+
+STEP 1: CREATE XHR object(XHR - XMLXTTPRequest)
+
+Syntax:
+    var variableName = new XMLXTTPRequest();
+    (new is a keyword which is used to create an object)
+
+Ex:
+    var a = new XMLXTTPRequest();
+
+STEP 2: OPEN A CONNECTION TO THE SERVER
+
+there are three parameters to open a connection to the server
+    *method(GET, POST, PUT, DELETE, HEAD, OPT)
+    *url(FROM WHERE TO GET THE DATA)
+    *true/false(optional)
+
+Syntax:
+    variableName.open("GET","URL")
+Ex:
+    a.open("GET", "URL");
+
+STEP 3: INITIATE BRIDGE TO THE SERVER / SENDING A CONNECTION TO THE SERVER / SENDING A REQUEST TO THE SERVER
+
+Syntax:
+    variableName.send();
+Ex:
+    a.send();
+
+
+    ----------REQUEST COMPLETED---------- 
+
+
+STEP 4: SERVER RESPONSE
+    *onload - it is an event\
+    *annaonymous function - it is a function without
+    *response
+
+Syntax:
+    variableName.onload = function(){
+        var variableName2 = variableName.response
+        console.log(variableName2);
+            (or)
+        console.log(JSON.parse(variableName2));
+    }
+Ex:
+    a.onload{
+        var b = a.response
+        console.log(b);
+            or
+        console.log(JSON.parse(b));
+    }
+
+
+
+TASK: PRINT QATAR, REGION, SUBREGION
+      PRINT REGION, SUBREGION, NAME
